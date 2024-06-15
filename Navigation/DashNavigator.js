@@ -4,12 +4,14 @@ import { MaterialIcons } from '@expo/vector-icons';
 import DashboardScreen from '../Page/Dashboard';
 import ProfileScreen from '../Page/Profile';
 import SettingsScreen from '../Page/Settings';
+import Menu from './MenuNavigator';
 
 const Tab = createBottomTabNavigator();
 
 function DashboardTabNavigator() {
     return (
         <Tab.Navigator
+            initialRouteName="Dashboard"
             screenOptions={({ route }) => ({
                 headerShown: false, // Hide the header for all screens in this navigator
                 tabBarIcon: ({ color, size }) => {
@@ -19,6 +21,8 @@ function DashboardTabNavigator() {
                     } else if (route.name === 'Profile') {
                         iconName = 'person';
                     } else if (route.name === 'Settings') {
+                        iconName = 'settings';
+                    } else if (route.name === 'Menu') {
                         iconName = 'settings';
                     }
 
@@ -38,7 +42,8 @@ function DashboardTabNavigator() {
             <Tab.Screen name="Dashboard" component={DashboardScreen} />
             <Tab.Screen name="Profile" component={ProfileScreen} />
             <Tab.Screen name="Settings" component={SettingsScreen} />
-        </Tab.Navigator>
+            <Tab.Screen name="Menu" component={Menu} />
+        </Tab.Navigator >
     );
 }
 
