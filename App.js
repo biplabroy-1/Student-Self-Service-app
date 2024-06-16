@@ -7,11 +7,12 @@ import HomeScreen from './Page/HomeScreen';
 import LoginScreen from './Page/LoginScreen';
 import DashboardTabNavigator from './Navigation/DashboardTabNavigator';
 import MenuNavigator from './Navigation/MenuNavigator';
-import Notesnavigator from './Navigation/Notesnavigator';
+
 
 const Stack = createStackNavigator();
 
 const App = () => {
+
   return (
     <NavigationContainer>
       <Stack.Navigator
