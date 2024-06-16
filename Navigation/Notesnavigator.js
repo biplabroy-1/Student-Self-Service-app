@@ -1,10 +1,11 @@
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import SubjectsScreen from '../Page/SubjectsScreen'
 import NotesScreen from '../Page/NotesScreen';
 
+const Stack = createStackNavigator();
+
 const Notesnavigator = () => {
-    const Stack = createNativeStackNavigator();
     return (
         <Stack.Navigator screenOptions={({ route }) => ({
             headerShown: !["Subject"].includes(route.name),
