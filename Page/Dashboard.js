@@ -1,14 +1,18 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { View, Text, ScrollView, Image } from "react-native";
+import { View, Text, ScrollView } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Navbar from "../Components/Navbar";
 import { NativeWindStyleSheet } from "nativewind";
 
 
-const Dashboard = ({ navigation }) => {
+const Dashboard = () => {
+
+    
+
+
     return (
-        <SafeAreaView>
+        <SafeAreaView className="flex-1 bg-white">
             <ScrollView className="bg-white">
                 <Navbar />
                 <View className="mt-4 px-4">
@@ -35,8 +39,10 @@ const Dashboard = ({ navigation }) => {
                 <View className="mt-4 px-4">
                     <Text className="text-xl font-semibold">Attendance</Text>
                     <View className="bg-teal-100 p-4 rounded-lg mt-2">
-                        <Text className="text-lg font-semibold">Subjects</Text>
-                        <Text className="text-xs mt-2">Oct - Sep 2023</Text>
+                        <View className='flex-row justify-between items-center'>
+                            <Text className="text-lg font-semibold">Subjects</Text>
+                            <Text className="text-xs mt-2">Oct - Sep 2023</Text>
+                        </View>
                         <View className="mt-2">
                             {[
                                 {
@@ -69,7 +75,12 @@ const Dashboard = ({ navigation }) => {
                                     attended: 32,
                                     total: 45,
                                 },
-                                { subject: "IBM", percentage: "71%", attended: 32, total: 45 },
+                                {
+                                    subject: "IBMTHE",
+                                    percentage: "71%",
+                                    attended: 32,
+                                    total: 45
+                                },
                                 {
                                     subject: "DMI001",
                                     percentage: "71%",
@@ -113,9 +124,11 @@ const Dashboard = ({ navigation }) => {
                     </View>
                 </View>
 
-                <View className="mt-4 px-4 pb-10">
-                    <Text className="text-xl font-semibold">Submission Task</Text>
-                    <Text className="text-xs text-blue-500 mt-1">See All</Text>
+                <View className="mt-4 px-4 pb-4">
+                    <View className='flex-row justify-between items-center'>
+                        <Text className="text-xl font-semibold">Submission Task</Text>
+                        <Text className="text-xs text-blue-500 mt-1">See All</Text>
+                    </View>
                     <View className="bg-teal-100 p-4 rounded-lg mt-2">
                         <Text className="text-base">Problem Solving</Text>
                         <Text className="text-xs">Cryptography & Network Security</Text>

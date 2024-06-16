@@ -12,7 +12,7 @@ const MenuNavigator = () => {
     return (
         <Stack.Navigator
             screenOptions={{
-                headerShown: false,
+                headerShown: true,
             }}
         >
             <Stack.Screen name="MainMenu" component={MainMenuScreen} />

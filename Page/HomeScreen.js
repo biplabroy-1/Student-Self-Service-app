@@ -13,7 +13,7 @@ const HomeScreen = () => {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView>
+    <SafeAreaView className="flex-1 bg-white">
       <View className="w-full h-2/3 flex items-center justify-center">
         <Image className="w-28 h-28" source={require("../assets/logo.png")} />
         <Text className="mt-10 font-bold text-blue-900 text-3xl text-center">
