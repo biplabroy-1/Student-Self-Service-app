@@ -1,9 +1,11 @@
-import * as React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "./Page/HomeScreen";
-import LoginScreen from "./Page/LoginScreen";
-import Dashboard from "./Navigation/DashNavigator";
+// App.js
+
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './Page/HomeScreen';
+import LoginScreen from './Page/LoginScreen';
+import DashboardTabNavigator from './Navigation/DashboardTabNavigator';
 
 const Stack = createStackNavigator();
 
@@ -18,7 +20,10 @@ const App = () => {
       >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Dash" component={Dashboard} />
+        <Stack.Screen
+          name="Dash"
+          component={DashboardTabNavigator}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

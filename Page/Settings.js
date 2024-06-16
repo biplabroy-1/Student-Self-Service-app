@@ -8,7 +8,7 @@ function Settings({ navigation }) {
             <Text>Settings Screen</Text>
             <Button
                 title="Go to Dashboard"
-                onPress={() => navigation.navigate('DashboardTab')}
+                onPress={() => navigation.navigate('Dashboard')}
             />
         </View>
     );

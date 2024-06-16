@@ -1,30 +1,16 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
 import { View, Text, ScrollView, Image } from "react-native";
-import { MaterialIcons } from '@expo/vector-icons';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
+import Navbar from "../Components/Navbar";
 import { NativeWindStyleSheet } from "nativewind";
-import { Button } from "react-native-paper";
 
-const Dashboard = () => {
+
+const Dashboard = ({ navigation }) => {
     return (
         <SafeAreaView>
             <ScrollView className="bg-white">
-                <View className="p-4 flex-row items-center justify-between ">
-                    <View className="flex-row items-center">
-                        <Image className="w-10 h-10 bg-gray-900 rounded-full" />
-                        <Text className="ml-2 text-2xl font-bold">NAMES</Text>
-                    </View>
-                    <Button className="bg-purple-500 rounded-3xl" onPress={() => {
-                        console.log('====================================');
-                        console.log("button");
-                        console.log('====================================');
-                    }}>
-                        <Text className="text-white font-bold">MENU</Text>
-                    </Button>
-                </View>
-
+                <Navbar />
                 <View className="mt-4 px-4">
                     <Text className="text-xl font-semibold">Today Class</Text>
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={true} className="mt-2">
