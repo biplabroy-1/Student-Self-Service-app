@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   View,
   Text,
   TextInput,
-  TouchableOpacity,
   Image,
   ScrollView,
   Alert,

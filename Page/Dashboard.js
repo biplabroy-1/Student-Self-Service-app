@@ -1,110 +1,134 @@
-import React from "react";
+import React, { useState } from "react";
 import { StatusBar } from "expo-status-bar";
 import { View, Text, ScrollView } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Navbar from "../Components/Navbar";
 import { NativeWindStyleSheet } from "nativewind";
+import * as Progress from 'react-native-progress';
+import Classes from '../assets/class.json'
 
 
 const Dashboard = () => {
+    const [Percent, setPercent] = useState(0)
 
-    
+    const added = () => {
+        setPercent(Math.floor((Math.random() * 100) + 1))
+    }
 
+    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const today = new Date().getDay();
+    const todayName = daysOfWeek[today];
+    const getTodaysClasses = (classes) => {
+        // Assuming classes array contains a single object
+        const todayClasses = classes[todayName] || [];
+        return todayClasses;
+    };
+
+
+    const todaysClasses = getTodaysClasses(Classes);
+
+    const Attendence = [
+        {
+            subject: "OBM752",
+            percentage: "71%",
+            attended: 32,
+            total: 45,
+        },
+        {
+            subject: "MG8591",
+            percentage: "84%",
+            attended: 26,
+            total: 31,
+        },
+        {
+            subject: "IT8761",
+            percentage: "71%",
+            attended: 10,
+            total: 14,
+        },
+        {
+            subject: "IT8711",
+            percentage: "100%",
+            attended: 11,
+            total: 11,
+        },
+        {
+            subject: "IT8075",
+            percentage: "71%",
+            attended: 32,
+            total: 45,
+        },
+        {
+            subject: "IBMTHE",
+            percentage: "71%",
+            attended: 32,
+            total: 45
+        },
+        {
+            subject: "DMI001",
+            percentage: "71%",
+            attended: 32,
+            total: 45,
+        },
+        {
+            subject: "CS8792",
+            percentage: "71%",
+            attended: 32,
+            total: 45,
+        },
+        {
+            subject: "CS8791",
+            percentage: "94%",
+            attended: 34,
+            total: 36,
+        },
+    ]
 
     return (
         <SafeAreaView className="flex-1 bg-white">
             <ScrollView className="bg-white">
                 <Navbar />
                 <View className="mt-4 px-4">
-                    <Text className="text-xl font-semibold">Today Class</Text>
+                    <Text className="text-xl font-semibold">{todayName} Class</Text>
                     <ScrollView horizontal={true} showsHorizontalScrollIndicator={true} className="mt-2">
                         <View className="flex-row">
-                            {[
-                                { title: 'Cryptography & Network System', time: '8:00 - 8:50 AM' },
-                                { title: 'Cloud Computing', time: '8:50 - 9:40 AM' },
-                                { title: 'Data Structures', time: '9:50 - 10:40 AM' },
-                                { title: 'Operating Systems', time: '10:50 - 11:40 AM' },
-                                { title: 'Software Engineering', time: '12:00 - 12:50 PM' },
-                                { title: 'Database Management', time: '1:00 - 1:50 PM' }
-                            ].map((item, index) => (
-                                <View key={index} className="bg-teal-100 p-2 rounded-lg mr-2 w-48 h-20  justify-around">
-                                    <Text className="text-base" numberOfLines={1}>{item.title}</Text>
-                                    <Text className="text-sm text-blue-800">{item.time}</Text>
+                            {todaysClasses.length > 0 ? (
+                                todaysClasses.map((item, index) => (
+                                    <View key={index} className="bg-teal-100 p-2 rounded-lg mr-2 justify-around">
+                                        <Text className="text-base font-bold h-8">{item.course}</Text>
+                                        <Text className="text-base">{item.teacher}</Text>
+                                        <Text className="text-base font-extrabold text-blue-800">{item.time}</Text>
+                                    </View>
+                                ))
+                            ) : (
+                                <View className="bg-gray-200 p-4 rounded-lg">
+                                    <Text className="text-base text-center">Yehhhhh! No class today 🎉</Text>
                                 </View>
-                            ))}
+                            )}
                         </View>
                     </ScrollView>
                 </View>
 
                 <View className="mt-4 px-4">
-                    <Text className="text-xl font-semibold">Attendance</Text>
+                    <Text className="text-xl font-semibold" onPress={added}>Attendance</Text>
                     <View className="bg-teal-100 p-4 rounded-lg mt-2">
                         <View className='flex-row justify-between items-center'>
                             <Text className="text-lg font-semibold">Subjects</Text>
                             <Text className="text-xs mt-2">Oct - Sep 2023</Text>
                         </View>
-                        <View className="mt-2">
-                            {[
-                                {
-                                    subject: "OBM752",
-                                    percentage: "71%",
-                                    attended: 32,
-                                    total: 45,
-                                },
-                                {
-                                    subject: "MG8591",
-                                    percentage: "84%",
-                                    attended: 26,
-                                    total: 31,
-                                },
-                                {
-                                    subject: "IT8761",
-                                    percentage: "71%",
-                                    attended: 10,
-                                    total: 14,
-                                },
-                                {
-                                    subject: "IT8711",
-                                    percentage: "100%",
-                                    attended: 11,
-                                    total: 11,
-                                },
-                                {
-                                    subject: "IT8075",
-                                    percentage: "71%",
-                                    attended: 32,
-                                    total: 45,
-                                },
-                                {
-                                    subject: "IBMTHE",
-                                    percentage: "71%",
-                                    attended: 32,
-                                    total: 45
-                                },
-                                {
-                                    subject: "DMI001",
-                                    percentage: "71%",
-                                    attended: 32,
-                                    total: 45,
-                                },
-                                {
-                                    subject: "CS8792",
-                                    percentage: "71%",
-                                    attended: 32,
-                                    total: 45,
-                                },
-                                {
-                                    subject: "CS8791",
-                                    percentage: "94%",
-                                    attended: 34,
-                                    total: 36,
-                                },
-                            ].map((item, index) => (
-                                <Text key={index} className="text-xs mt-1">
-                                    {item.subject} - ({item.attended}/{item.total}){" "}
-                                    {item.percentage}
-                                </Text>
-                            ))}
+                        <View className='mt-2 flex-row justify-between items-center'>
+                            <View className="">
+                                {Attendence.map((item, index) => (
+                                    <Text key={index} className="text-base my-1">
+                                        {item.subject} - ({item.attended}/{item.total}){" "}
+                                        {item.percentage}
+                                    </Text>
+                                ))}
+                            </View>
+                            <View className='items-center '>
+                                <Progress.Pie size={130} progress={Percent / 100} thickness={10} color={Percent <= 40 ? 'red' : '' || Percent >= 80 ? 'green' : 'blue'} showsText='true' />
+                                <Text className={`text-3xl mt-4 font-bold ${Percent <= 40 ? ' text-red-700' : '' || Percent >= 80 ? 'text-green-700' : 'text-blue-700'}`}>{Percent} %</Text>
+                            </View>
                         </View>
                     </View>
                 </View>

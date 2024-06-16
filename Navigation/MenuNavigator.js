@@ -11,13 +11,12 @@ const Stack = createStackNavigator();
 const MenuNavigator = () => {
     return (
         <Stack.Navigator
-            screenOptions={{
-                headerShown: true,
-            }}
+            screenOptions={({ route }) => ({
+                headerShown: !['MainMenu'].includes(route.name),
+            })}
         >
             <Stack.Screen name="MainMenu" component={MainMenuScreen} />
-            <Stack.Screen name="Search" component={SearchScreen} />
-            <Stack.Screen name="Tools" component={ToolsScreen} />
+
         </Stack.Navigator>
     );
 };

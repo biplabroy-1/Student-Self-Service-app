@@ -7,6 +7,7 @@ import HomeScreen from './Page/HomeScreen';
 import LoginScreen from './Page/LoginScreen';
 import DashboardTabNavigator from './Navigation/DashboardTabNavigator';
 import MenuNavigator from './Navigation/MenuNavigator';
+import MyProfile from './Page/ProfileScreen';
 
 
 const Stack = createStackNavigator();
@@ -18,11 +19,12 @@ const App = () => {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={({ route }) => ({
-          headerShown: !["Home", "Dash"].includes(route.name),
+          headerShown: ['Login', 'Menu', 'Profile','Search','Tools'].includes(route.name),
         })}
       >
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="Profile" component={MyProfile} />
         <Stack.Screen
           name="Dash"
           component={DashboardTabNavigator}
@@ -31,6 +33,8 @@ const App = () => {
           name="Menu"
           component={MenuNavigator}
         />
+        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen name="Tools" component={ToolsScreen} />
 
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,0 +1,219 @@
+{
+  "Monday": [
+    {
+      "period": "4th",
+      "time": "11:00 - 12:00",
+      "course": "BOOT CAMP",
+      "teacher": "MS. SULATA MONDAL",
+      "room": "013",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "5th",
+      "time": "12:00 - 1:00",
+      "course": "Data Structure and Algorithm",
+      "teacher": "MR. KOUSIK DEY",
+      "room": "013",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "6th",
+      "time": "1:00 - 2:00",
+      "course": "Data Structure and Algorithm",
+      "teacher": "MR. KOUSIK DEY",
+      "room": "013",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "8th, 9th, 10th",
+      "time": "3:00 - 4:00",
+      "course": "Data Structure and Algorithm Lab",
+      "teacher": "MR. KOUSIK DEY",
+      "room": "412",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    }
+  ],
+  "Tuesday": [
+    {
+      "period": "2nd",
+      "time": "9:00 - 10:00",
+      "course": "Discrete Mathematical Structure",
+      "teacher": "MR. BIKRAM DHOLLEY",
+      "room": "009",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "5th",
+      "time": "12:00 - 1:00",
+      "course": "Environmental Studies",
+      "teacher": "MR. CHANDAN SANTRA",
+      "room": "009",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "6th",
+      "time": "1:00 - 2:00",
+      "course": "Data Structure and Algorithm",
+      "teacher": "MR. KOUSIK DEY",
+      "room": "009",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "8th, 9th, 10th",
+      "time": "3:00 - 6:00",
+      "course": "HTML, CSS and CSS Preprocessor",
+      "teacher": "MS. SHRESTHA MAJUMDER, MS. ANUMA THAKURI",
+      "room": "401",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    }
+  ],
+  "Wednesday": [
+    {
+      "period": "6th",
+      "time": "3:00 - 4:00",
+      "course": "Data Structure and Algorithm Lab",
+      "teacher": "MR. KOUSIK DEY",
+      "room": "412",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "7th",
+      "time": "3:00 - 4:00",
+      "course": "Python Lab",
+      "teacher": "MR. ANIRBAN BERA, MR. BITAN ROY",
+      "room": "409",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "9th",
+      "time": "4:00 - 5:00",
+      "course": "Discrete Mathematical Structure",
+      "teacher": "MR. BIKRAM DHOLLEY",
+      "room": "009",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "10th",
+      "time": "5:00 - 6:00",
+      "course": "APTI",
+      "teacher": "MS. NAMRATA BANERJEE",
+      "room": "013",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    }
+  ],
+  "Thursday": [
+    {
+      "period": "3rd",
+      "time": "10:00 - 11:00",
+      "course": "Computer Architecture",
+      "teacher": "MR. GOURANGA BAG",
+      "room": "309",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "4th",
+      "time": "11:00 - 12:00",
+      "course": "Communicative English",
+      "teacher": "MS. TRISHA SENGUPTA",
+      "room": "309",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "5th",
+      "time": "1:00 - 2:00",
+      "course": "Discrete Mathematical Structure",
+      "teacher": "MR. BIKRAM DHOLLEY",
+      "room": "009",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "8th",
+      "time": "3:00 - 4:00",
+      "course": "Python Lab",
+      "teacher": "MR. ANIRBAN BERA, MR. BITAN ROY",
+      "room": "409",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "9th",
+      "time": "4:00 - 5:00",
+      "course": "Python Lab",
+      "teacher": "MR. ANIRBAN BERA, MR. BITAN ROY",
+      "room": "409",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "10th",
+      "time": "5:00 - 6:00",
+      "course": "Python Lab",
+      "teacher": "MR. ANIRBAN BERA, MR. BITAN ROY",
+      "room": "409",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    }
+  ],
+  "Friday": [
+    {
+      "period": "5th",
+      "time": "12:00 - 1:00",
+      "course": "Data Structure and Algorithm",
+      "teacher": "MR. KOUSIK DEY",
+      "room": "107",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "6th",
+      "time": "1:00 - 2:00",
+      "course": "BOOT CAMP",
+      "teacher": "MS. SULATA MONDAL",
+      "room": "107",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "4th",
+      "time": "11:00 - 12:00",
+      "course": "Communicative English",
+      "teacher": "MS. TRISHA SENGUPTA",
+      "room": "309",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "5th",
+      "time": "12:00 - 1:00",
+      "course": "Environmental Studies",
+      "teacher": "MR. CHANDAN SANTRA",
+      "room": "009",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    },
+    {
+      "period": "3rd",
+      "time": "10:00 - 11:00",
+      "course": "Computer Architecture",
+      "teacher": "MR. GOURANGA BAG",
+      "room": "309",
+      "building": "University Building: 6",
+      "class": "BCA2M"
+    }
+  ]
+}

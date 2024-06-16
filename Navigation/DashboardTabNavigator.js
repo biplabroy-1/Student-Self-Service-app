@@ -4,7 +4,6 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { MaterialIcons } from '@expo/vector-icons';
 import DashboardScreen from '../Page/Dashboard';
-import ProfileScreen from '../Page/ProfileScreen';
 import Notesnavigator from './Notesnavigator';
 
 
@@ -35,7 +34,6 @@ const DashboardTabNavigator = () => {
             })}
         >
             <Tab.Screen name="Dashboard" component={DashboardScreen} />
-            <Tab.Screen name="Profile" component={ProfileScreen} />
             <Tab.Screen name="Notes" component={Notesnavigator} />
         </Tab.Navigator>
     );
