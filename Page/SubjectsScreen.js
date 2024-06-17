@@ -21,9 +21,63 @@ export default SubjectsScreen = ({ navigation }) => {
                         <Text>OBM752</Text>
                         <Text>Hospital Management</Text>
                     </TouchableOpacity>
-                    {/* Add more subject cards */}
+                    <TouchableOpacity
+                        style={{
+                            padding: 16,
+                            backgroundColor: '#e0f2f1',
+                            borderRadius: 8,
+                            marginRight: 8,
+                            marginBottom: 8,
+                        }}
+                        onPress={() => navigation.navigate('PDFs')}
+                    >
+                        <Text>OBM752</Text>
+                        <Text>Hospital Management</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        style={{
+                            padding: 16,
+                            backgroundColor: '#e0f2f1',
+                            borderRadius: 8,
+                            marginRight: 8,
+                            marginBottom: 8,
+                        }}
+                        onPress={() => navigation.navigate('PDFs')}
+                    >
+                        <Text>OBM752</Text>
+                        <Text>Hospital Management</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={{
+                            padding: 16,
+                            backgroundColor: '#e0f2f1',
+                            borderRadius: 8,
+                            marginRight: 8,
+                            marginBottom: 8,
+                        }}
+                        onPress={() => navigation.navigate('PDFs')}
+                    >
+                        <Text>OBM752</Text>
+                        <Text>Hospital Management</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        style={{
+                            padding: 16,
+                            backgroundColor: '#e0f2f1',
+                            borderRadius: 8,
+                            marginRight: 8,
+                            marginBottom: 8,
+                        }}
+                        onPress={() => navigation.navigate('PDFs')}
+                    >
+                        <Text>OBM752</Text>
+                        <Text>Hospital Management</Text>
+                    </TouchableOpacity>
+
                 </View>
             </View>
+
         </SafeAreaView>
     );
 };

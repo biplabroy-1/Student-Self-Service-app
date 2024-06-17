@@ -23,10 +23,10 @@ const Dashboard = () => {
         const todayClasses = classes[todayName] || [];
         return todayClasses;
     };
-
-
     const todaysClasses = getTodaysClasses(Classes);
 
+
+    
     const Attendence = [
         {
             subject: "OBM752",

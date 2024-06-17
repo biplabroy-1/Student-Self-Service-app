@@ -8,7 +8,8 @@ import LoginScreen from './Page/LoginScreen';
 import DashboardTabNavigator from './Navigation/DashboardTabNavigator';
 import MenuNavigator from './Navigation/MenuNavigator';
 import MyProfile from './Page/ProfileScreen';
-
+import SearchScreen from './Page/Menu/SearchScreen'
+import ToolsScreen from './Page/Menu/ToolsScreen'
 
 const Stack = createStackNavigator();
 

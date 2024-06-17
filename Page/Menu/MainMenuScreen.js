@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, FlatList } from 'react-native';
-import { Button } from "react-native-paper";
+import { Button, Searchbar } from "react-native-paper";
 
 export default MainMenuScreen = ({ navigation }) => {
+    const [SearchText, setSearchText] = useState("");
+
     const menuItems = [
-        { title: 'Search', onPress: () => navigation.navigate('Search') },
         { title: 'About' },
         { title: 'Admission' },
         { title: 'Academics' },
@@ -14,6 +15,8 @@ export default MainMenuScreen = ({ navigation }) => {
     return (
         <View className='flex-1 bg-white'>
             <View>
+                <Searchbar className='mx-2 ' value={SearchText}
+                    onChangeText={(text) => setSearchText(text)}></Searchbar>
                 <FlatList
                     data={menuItems}
                     keyExtractor={(item, index) => index.toString()}
