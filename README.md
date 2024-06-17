@@ -11,10 +11,14 @@ StudentLink is an innovative app designed to enhance the self-service capabiliti
 
 ## Screenshots
 
-![Home](screenshots/Home.png =400x) ![Login](screenshots/Login.png =400x)
-![Dashboard](screenshots/Dashboard.png =400x) ![Profile](screenshots/Profile.png =400x)
-![Menu](screenshots/Menu.png =400x) ![Subject](screenshots/Subject.png =400x)
-![Notes](screenshots/Notes.png =400x)
+<img src="screenshots/Home.png" alt="Home" width="400" />
+<img src="screenshots/Login.png" alt="Login" width="400" />
+<img src="screenshots/Dashboard.png" alt="Dashboard" width="400" />
+<img src="screenshots/Profile.png" alt="Profile" width="400" />
+<img src="screenshots/Menu.png" alt="Menu" width="400" />
+<img src="screenshots/Subject.png" alt="Subject" width="400" />
+<img src="screenshots/Notes.png" alt="Notes" width="400" />
+
 
 
 ## Getting Started
