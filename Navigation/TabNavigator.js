@@ -1,4 +1,4 @@
-// DashboardTabNavigator.js
+// TabNavigator.js
 
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -9,7 +9,7 @@ import Notesnavigator from './Notesnavigator';
 
 const Tab = createBottomTabNavigator();
 
-const DashboardTabNavigator = () => {
+const TabNavigator = () => {
     return (
         <Tab.Navigator
             initialRouteName="Dashboard"
@@ -39,4 +39,4 @@ const DashboardTabNavigator = () => {
     );
 };
 
-export default DashboardTabNavigator;
+export default TabNavigator;

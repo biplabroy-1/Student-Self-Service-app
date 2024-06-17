@@ -5,11 +5,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './Page/HomeScreen';
 import LoginScreen from './Page/LoginScreen';
-import DashboardTabNavigator from './Navigation/DashboardTabNavigator';
+import TabNavigator from './Navigation/TabNavigator';
 import MenuNavigator from './Navigation/MenuNavigator';
 import MyProfile from './Page/ProfileScreen';
-import SearchScreen from './Page/Menu/SearchScreen'
-import ToolsScreen from './Page/Menu/ToolsScreen'
 
 const Stack = createStackNavigator();
 
@@ -20,7 +18,7 @@ const App = () => {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={({ route }) => ({
-          headerShown: ['Login', 'Menu', 'Profile','Search','Tools'].includes(route.name),
+          headerShown: ['Login', 'Menu', 'Profile'].includes(route.name),
         })}
       >
         <Stack.Screen name="Home" component={HomeScreen} />
@@ -28,15 +26,12 @@ const App = () => {
         <Stack.Screen name="Profile" component={MyProfile} />
         <Stack.Screen
           name="Dash"
-          component={DashboardTabNavigator}
+          component={TabNavigator}
         />
         <Stack.Screen
           name="Menu"
           component={MenuNavigator}
         />
-        <Stack.Screen name="Search" component={SearchScreen} />
-        <Stack.Screen name="Tools" component={ToolsScreen} />
-
       </Stack.Navigator>
     </NavigationContainer>
   );
