@@ -3,9 +3,10 @@ import { StatusBar } from "expo-status-bar";
 import { View, Text, ScrollView } from "react-native";
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Navbar from "../Components/Navbar";
+import ClassComponoent from "../Components/ClassComponoent";
 import { NativeWindStyleSheet } from "nativewind";
 import * as Progress from 'react-native-progress';
-import Classes from '../assets/class.json'
+
 
 
 const Dashboard = () => {
@@ -15,18 +16,10 @@ const Dashboard = () => {
         setPercent(Math.floor((Math.random() * 100) + 1))
     }
 
-    const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const today = new Date().getDay();
-    const todayName = daysOfWeek[today];
-    const getTodaysClasses = (classes) => {
-        // Assuming classes array contains a single object
-        const todayClasses = classes[todayName] || [];
-        return todayClasses;
-    };
-    const todaysClasses = getTodaysClasses(Classes);
 
 
-    
+
+
     const Attendence = [
         {
             subject: "OBM752",
@@ -89,24 +82,8 @@ const Dashboard = () => {
             <ScrollView className="bg-white">
                 <Navbar />
                 <View className="mt-4 px-4">
-                    <Text className="text-xl font-semibold">{todayName} Class</Text>
-                    <ScrollView horizontal={true} showsHorizontalScrollIndicator={true} className="mt-2">
-                        <View className="flex-row">
-                            {todaysClasses.length > 0 ? (
-                                todaysClasses.map((item, index) => (
-                                    <View key={index} className="bg-teal-100 p-2 rounded-lg mr-2 justify-around">
-                                        <Text className="text-base font-bold h-8">{item.course}</Text>
-                                        <Text className="text-base">{item.teacher}</Text>
-                                        <Text className="text-base font-extrabold text-blue-800">{item.time}</Text>
-                                    </View>
-                                ))
-                            ) : (
-                                <View className="bg-gray-200 p-4 rounded-lg">
-                                    <Text className="text-base text-center">Yehhhhh! No class today 🎉</Text>
-                                </View>
-                            )}
-                        </View>
-                    </ScrollView>
+                    <Text className="text-xl font-semibold">Class</Text>
+                    <ClassComponoent />
                 </View>
 
                 <View className="mt-4 px-4">
