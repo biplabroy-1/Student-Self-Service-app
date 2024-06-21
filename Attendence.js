@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text } from 'react-native';
-import * as Progress from 'react-native-progress';
+import React, { useEffect, useState } from 'react';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 
-function Attendence() {
-
+const App = () => {
     const [attendancePercentage, setAttendancePercentage] = useState('');
     const [upcomingPayment, setUpcomingPayment] = useState('');
     const [numberOfActivities, setNumberOfActivities] = useState('');
@@ -18,7 +16,7 @@ function Attendence() {
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
                     },
-                    body: 'student_code=BWU/BCA/23/783&password=your_password&login=Login',
+                    body: 'student_code=BWU/BCA/23/783&password=Biplab@009&login=Login',
                 });
 
                 const text = await response.text();
@@ -84,29 +82,65 @@ function Attendence() {
     }, []);
 
     return (
-        <View className="mt-4 px-4">
-            <Text className="text-xl font-semibold">Attendance</Text>
-            <View className="bg-teal-100 p-4 rounded-lg mt-2">
-                <View className='flex-row justify-between items-center'>
-                    <Text className="text-lg font-semibold">Subjects</Text>
-                    <Text className="text-xs mt-2">Oct - Sep 2023</Text>
-                </View>
-                <View className='mt-2 flex-row justify-between items-center'>
-                    <View className="">
-                        {courseAttendance.map((item, index) => (
-                            <Text key={index} className="text-base my-1">
-                                {item.courseCode} - ({item.attendance}) {item.percentage}%
-                            </Text>
-                        ))}
-                    </View>
-                    <View className='items-center '>
-                        <Progress.Pie size={130} progress={attendancePercentage / 100} thickness={10} color={attendancePercentage <= 40 ? 'red' : '' || attendancePercentage >= 80 ? 'green' : 'blue'} showsText='true' />
-                        <Text className={`text-3xl mt-4 font-bold ${attendancePercentage <= 40 ? ' text-red-700' : '' || attendancePercentage >= 80 ? 'text-green-700' : 'text-blue-700'}`}>{attendancePercentage} %</Text>
-                    </View>
-                </View>
+        <ScrollView style={styles.container}>
+            <View style={styles.section}>
+                <Text style={styles.heading}>Attendance</Text>
+                <Text style={styles.value}>{attendancePercentage}</Text>
             </View>
-        </View>
-    );
-}
 
-export default Attendence;
+            <View style={styles.section}>
+                <Text style={styles.heading}>Upcoming Payment</Text>
+                <Text style={styles.value}>{upcomingPayment}</Text>
+            </View>
+
+            <View style={styles.section}>
+                <Text style={styles.heading}>Number of Activities</Text>
+                <Text style={styles.value}>{numberOfActivities}</Text>
+            </View>
+
+            <View style={styles.section}>
+                <Text style={styles.heading}>SGPA - 1st Semester</Text>
+                <Text style={styles.value}>{sgpa}</Text>
+            </View>
+
+            <View style={styles.section}>
+                <Text style={styles.heading}>Course Wise Attendance</Text>
+                {courseAttendance.map((course, index) => (
+                    <View key={index} style={styles.courseContainer}>
+                        <Text>Course Code: {course.courseCode}</Text>
+                        <Text>Course Name: {course.courseName}</Text>
+                        <Text>Attendance: {course.attendance}</Text>
+                        <Text>Percentage: {course.percentage}</Text>
+                    </View>
+                ))}
+            </View>
+        </ScrollView>
+    );
+};
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 20,
+        backgroundColor: '#fff',
+    },
+    section: {
+        marginBottom: 20,
+    },
+    heading: {
+        fontSize: 18,
+        fontWeight: 'bold',
+    },
+    value: {
+        fontSize: 16,
+        marginTop: 5,
+    },
+    courseContainer: {
+        borderWidth: 1,
+        borderColor: '#ccc',
+        padding: 10,
+        marginBottom: 10,
+    },
+});
+
+export default App;

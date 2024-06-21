@@ -7,16 +7,7 @@ import ClassComponoent from "../Components/ClassComponoent";
 import { NativeWindStyleSheet } from "nativewind";
 import Attendence from "../Components/Attendence";
 
-
-
-
 const Dashboard = () => {
-
-
-
-
-
-
 
     return (
         <SafeAreaView className="flex-1 bg-white">
